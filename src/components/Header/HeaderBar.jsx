@@ -1,16 +1,26 @@
 import React from 'react'
+import { Link, link } from 'react-router-dom';
 
 function HeaderBar() {
     return (
-        <div>
+        
           
-            <nav className="navbar navbar-light bg-light">
-                <div className="container-fluid">
-                    <span className="navbar-brand mb-0 h1">Name list</span>
-                </div>
+            <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+                <span className="navbar-brand mb-0 h1">Welcome</span>
+                    <ul className="navbar-nav">
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/">Home</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/about">About</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/namelist">Show Name List</Link>
+                        </li>
+                     </ul>
+                
             </nav> 
-        </div>
-    )
+    );
 }
 
 export default HeaderBar
